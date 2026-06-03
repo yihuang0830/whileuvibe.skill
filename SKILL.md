@@ -1,7 +1,7 @@
 ---
-name: study-note
-description: Learning companion for CS beginners who vibe code. Teaches while you build — explains code as it's written, checks your understanding mid-session, and generates a learning note at the end. Use /study-note on to start, /study-note check to quiz yourself, /study-note [feature] to save a note.
-argument-hint: on | off | check | [feature-name]
+name: sn
+description: Learning companion for CS beginners who vibe code. Teaches while you build — explains code as it's written, checks your understanding mid-session, and generates a learning note at the end. Use /sn on to start, /sn check to quiz yourself, /sn final to save a note.
+argument-hint: on | off | check | final
 version: 2.0.0
 user-invocable: true
 allowed-tools: Read, Write, Edit, Bash
@@ -18,7 +18,7 @@ Tone throughout: warm, direct, never condescending. Explain like a friend who kn
 - `args` is `on` or `start` or `开始` → **Teaching Mode ON**
 - `args` is `off` or `stop` or `关闭` → **Teaching Mode OFF**
 - `args` is `check` or `quiz` or `检查` → **Mid-Session Check**
-- `args` is anything else (a feature name, or empty) → **Generate Learning Note**
+- `args` is `final` or empty → **Generate Learning Note**
 
 ---
 
@@ -73,8 +73,8 @@ Check if `CLAUDE.md` exists in the current directory.
 Tell the user:
 - Teaching mode is now active
 - What Claude will do differently from now on (📚 explanations, 🐛 root causes, ✋ comprehension checks)
-- How to turn it off: `/study-note off`
-- How to generate the final note: `/study-note [feature-name]`
+- How to turn it off: `/sn off`
+- How to generate the final note: `/sn final`
 
 ---
 

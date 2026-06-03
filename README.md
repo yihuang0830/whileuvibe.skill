@@ -1,4 +1,4 @@
-# study-note
+# study-note (`/sn`)
 
 A Claude Code skill for CS beginners who vibe code but want to actually learn.
 
@@ -10,35 +10,29 @@ Not just a note-taker — a learning companion that teaches you while you build,
 /skill install https://github.com/yihuang0830/skill.skill
 ```
 
-## How to use
+## Commands
 
-### At the start of a session
+| Command | When to use |
+|---|---|
+| `/sn on` | Start of a session — activates teaching mode |
+| `/sn check` | Mid-session — quick 3-question quiz on your actual code |
+| `/sn final` | End of session — generates a learning note |
+| `/sn off` | Turn off teaching mode |
 
-```
-/study-note on
-```
+## What each command does
 
+### `/sn on`
 Activates teaching mode. From here on, Claude will:
 - After every code block: add a 📚 "为什么这样写" explanation
 - After every bug fix: add a 🐛 "根本原因" in plain language
 - After every key decision: add a 💡 "为什么这么决定"
-- Every 3–4 exchanges: ask a ✋ comprehension check — "用你自己的话说说这个函数是干什么的？"
+- Every 3–4 exchanges: ask a ✋ comprehension check
 
-### During the session (anytime)
+### `/sn check`
+A quick mid-session quiz based on your actual code. 3 questions, one at a time, with feedback on each answer.
 
-```
-/study-note check
-```
-
-A quick mid-session quiz based on your actual code. 3 questions, one at a time, with feedback.
-
-### At the end of the session
-
-```
-/study-note login-feature
-```
-
-Generates a personalized learning note saved to `docs/learning-notes/YYYY-MM-DD-login-feature.md`, covering:
+### `/sn final`
+Generates a personalized learning note saved to `docs/learning-notes/YYYY-MM-DD-<feature>.md`, covering:
 - What you built and why it works
 - Technical concepts explained with your actual code as the example
 - Data flow diagram
@@ -47,11 +41,8 @@ Generates a personalized learning note saved to `docs/learning-notes/YYYY-MM-DD-
 - Quiz questions
 - A rebuild challenge to try without AI
 
-### To turn off teaching mode
-
-```
-/study-note off
-```
+### `/sn off`
+Removes teaching mode. Claude goes back to normal.
 
 ---
 
