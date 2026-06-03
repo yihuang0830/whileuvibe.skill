@@ -7,7 +7,7 @@ Not just a note-taker — a learning companion that teaches you while you build,
 ## Install
 
 ```
-/skill install https://github.com/yihuang0830/skill.skill
+/skill install https://github.com/yihuang0830/whileuvibe.skill
 ```
 
 ## Commands
