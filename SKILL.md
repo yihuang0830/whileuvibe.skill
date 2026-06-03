@@ -1,6 +1,6 @@
 ---
-name: sn
-description: Learning companion for CS beginners who vibe code. Teaches while you build — explains code as it's written, checks your understanding mid-session, and generates a learning note at the end. Use /sn on to start, /sn check to quiz yourself, /sn final to save a note.
+name: yuv
+description: Learning companion for CS beginners who vibe code. Teaches while you build — explains code as it's written, checks your understanding mid-session, and generates a learning note at the end. Use /yuv on to start, /yuv check to quiz yourself, /yuv final to save a note.
 argument-hint: on | off | check | final
 version: 2.0.0
 user-invocable: true
@@ -73,8 +73,8 @@ Check if `CLAUDE.md` exists in the current directory.
 Tell the user:
 - Teaching mode is now active
 - What Claude will do differently from now on (📚 explanations, 🐛 root causes, ✋ comprehension checks)
-- How to turn it off: `/sn off`
-- How to generate the final note: `/sn final`
+- How to turn it off: `/yuv off`
+- How to generate the final note: `/yuv final`
 
 ---
 
