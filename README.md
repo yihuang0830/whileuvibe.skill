@@ -18,7 +18,7 @@ Analyzes your coding session (git diff + conversation context) and generates a s
 ## Install
 
 ```
-/skill install https://github.com/<your-username>/study-note
+/skill install https://github.com/yihuang0830/skill.skill
 ```
 
 Or add directly to your project's `.claude/skills/` directory.
