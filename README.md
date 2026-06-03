@@ -1,4 +1,4 @@
-# study-note (`/yuv`)
+# whileuvibe (`/yuv`) - you understand vibing
 
 A Claude Code skill for CS beginners who vibe code but want to actually learn.
 
