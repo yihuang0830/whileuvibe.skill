@@ -2,18 +2,7 @@
 
 A Claude Code skill for CS beginners who vibe code but want to actually learn.
 
-After finishing a feature, run `/study-note` and get a personalized learning note saved to your project — written using your own code as the example.
-
-## What it does
-
-Analyzes your coding session (git diff + conversation context) and generates a structured note covering:
-
-- What you built and why it works
-- The technical concepts your code actually uses
-- The "why" behind every key decision
-- Bugs you hit and how you fixed them
-- A quiz to test yourself
-- A rebuild challenge to practice without AI
+Not just a note-taker — a learning companion that teaches you while you build, checks your understanding mid-session, and generates a study note at the end.
 
 ## Install
 
@@ -21,33 +10,56 @@ Analyzes your coding session (git diff + conversation context) and generates a s
 /skill install https://github.com/yihuang0830/skill.skill
 ```
 
-Or add directly to your project's `.claude/skills/` directory.
+## How to use
 
-## Usage
+### At the start of a session
 
-After finishing a feature:
+```
+/study-note on
+```
+
+Activates teaching mode. From here on, Claude will:
+- After every code block: add a 📚 "为什么这样写" explanation
+- After every bug fix: add a 🐛 "根本原因" in plain language
+- After every key decision: add a 💡 "为什么这么决定"
+- Every 3–4 exchanges: ask a ✋ comprehension check — "用你自己的话说说这个函数是干什么的？"
+
+### During the session (anytime)
+
+```
+/study-note check
+```
+
+A quick mid-session quiz based on your actual code. 3 questions, one at a time, with feedback.
+
+### At the end of the session
 
 ```
 /study-note login-feature
 ```
 
-Or with no args — it infers the feature name from your git history:
+Generates a personalized learning note saved to `docs/learning-notes/YYYY-MM-DD-login-feature.md`, covering:
+- What you built and why it works
+- Technical concepts explained with your actual code as the example
+- Data flow diagram
+- Key design decisions and their reasoning
+- Bugs you hit and how they got fixed
+- Quiz questions
+- A rebuild challenge to try without AI
+
+### To turn off teaching mode
 
 ```
-/study-note
+/study-note off
 ```
 
-The note is saved to `docs/learning-notes/YYYY-MM-DD-<feature-name>.md`.
+---
 
 ## Who this is for
 
-You started coding in the era of AI assistants. You can ship things. But sometimes you finish a feature and realize you don't fully understand what you built.
+You started coding in the era of AI assistants. You can ship things. But sometimes you finish a feature and realize you don't fully understand what you built — you were just the one pressing Enter.
 
-This skill bridges that gap — it doesn't slow down your vibe coding, it just makes sure you walk away having actually learned something.
-
-## Example output
-
-See [example-note.md](docs/example-note.md) for a sample of what the generated notes look like.
+This skill fixes that. It doesn't slow down your vibe coding. It makes sure you actually understand what you're building as you build it.
 
 ## License
 
